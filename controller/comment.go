@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-type CommentListResponse struct {
+type CommentListResponse struct { 
 	Response
 	CommentList []Comment `json:"comment_list,omitempty"`
 }

@@ -20,7 +20,7 @@ func initRouter(r *gin.Engine) {
   
   apiRouter := r.Group("/douyin")
 
-  // basic apis
+  // basic apis路由定义
   apiRouter.GET("/feed/", controller.Feed)
   apiRouter.GET("/user/", controller.UserInfo)
   apiRouter.POST("/user/register/", controller.Register)
