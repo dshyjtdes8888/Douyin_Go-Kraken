@@ -8,3 +8,4 @@ debug:
     console: integratedTerminal
     cwd: .
 compile_command: go build
+gui: false

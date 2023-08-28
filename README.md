@@ -1,4 +1,6 @@
 
+数据库连接
+mysql -h 172.16.32.35 -P 50933 -u root -p
 
 # simple-demo
 

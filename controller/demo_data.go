@@ -1,6 +1,6 @@
 package controller
 
-var DemoVideos = []Video{
+var DemoVideos = []*Video{
 	{
 		Id:            1,
 		Author:        DemoUser,
