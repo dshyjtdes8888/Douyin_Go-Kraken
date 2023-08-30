@@ -20,7 +20,6 @@ type Video struct {
 	Title         string `json:"title"`    //标题
 }
 
-
 // Comment 结构体表示评论信息。
 type Comment struct {
 	Id         int64  `json:"id,omitempty"`          // 评论ID
@@ -29,7 +28,12 @@ type Comment struct {
 	CreateDate string `json:"create_date,omitempty"` // 评论创建日期
 }
 
-
+// Favorite 结构体表示点赞信息
+type Favorite struct {
+	Id      int64 `json:"id,omitempty"`
+	UserId  int64 `json:"user_id,omitempty"`
+	VideoId int   `json:"video_id,omitempty"`
+}
 
 // User 结构体表示用户信息。
 type User struct {
@@ -57,14 +61,6 @@ type VideoListItem struct {
 	CommentCount  int64  `json:"comment_count"`
 	IsFavorite    bool   `json:"is_favorite"`
 	Title         string `json:"title"`
-}
-
-// FeedResponse 自定义结构体用于接口响应
-type FeedResponse struct {
-	StatusCode int             `json:"status_code"`
-	StatusMsg  string          `json:"status_msg"`
-	NextTime   int64           `json:"next_time"`
-	VideoList  []VideoListItem `json:"video_list"`
 }
 
 // Message 结构体表示聊天消息。
